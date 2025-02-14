@@ -1,0 +1,294 @@
+/* .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.form-container {
+  flex: 1;
+  min-width: 350px; 
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.calendar-container {
+  flex: 2;
+  min-width: 500px; 
+  max-width: 600px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  .open-calendar-btn {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+
+  .open-calendar-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .selected-time {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  .calendar-container {
+    flex: 2;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .close-calendar-btn {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    float: right;
+  }
+
+  .schedule-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  .schedule-btn:hover {
+    background-color: #218838;
+  } */
+
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Ensures proper stacking on smaller screens */
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    max-height: 200px;
+  }
+  .form-container {
+    flex: 1;
+    min-width: 350px;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Spacing between fields */
+  }
+  
+  .form-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    width: 40%; /* Adjusts label width */
+  }
+  
+  .input-field, select, .open-calendar-btn {
+    width: 55%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+    transition: border 0.3s ease;
+  }
+  
+  .input-field:focus, select:focus {
+    border: 1px solid #007bff;
+    outline: none;
+    background: #fff;
+  }
+  
+  .form-container:hover {
+    transform: scale(1.02);
+  }
+  
+  .calendar-container {
+    flex: 2;
+    min-width: 550px;
+    max-width: 650px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f4f4f4;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .input-field {
+    width: auto;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    font-size: 16px;
+    transition: border 0.3s;
+  }
+  
+  .input-field:focus {
+    border: 1px solid #007BFF;
+    outline: none;
+  }
+  
+  .open-calendar-btn {
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .open-calendar-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .selected-time {
+    margin: 12px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .close-calendar-btn {
+    background: red;
+    color: white;
+    border: none;
+
+    cursor: pointer;
+    padding: 5px 12px;
+    font-size: 16px;
+
+   
+  }
+  
+  .schedule-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .schedule-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .form-container {
+      max-width: 100%;
+    }
+  
+    .calendar-container {
+      max-width: 100%;
+    }
+  }
+  .scroll-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #f5f5f5;
+    padding: 10px 0;
+  }
+  
+  .scroll-content {
+    display: flex;
+    gap: 50px;
+    animation: scrollLeft 15s linear infinite;
+  }
+  
+  .scroll-item {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    padding: 5px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  @keyframes scrollLeft {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
